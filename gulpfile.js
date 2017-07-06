@@ -5,8 +5,9 @@
     var del = require('del');
     var replace = require('gulp-replace');
     var less = require('gulp-less');
-    var cssmin = require('gulp-cssmin');
     var concat = require('gulp-concat');
+    var autoprefixer = require('gulp-autoprefixer');
+    var cssmin = require('gulp-cssmin');
     var rename = require('gulp-rename');
     var webpack = require('webpack-stream');
     var sequence = require('run-sequence');
@@ -76,6 +77,7 @@
                 .src(files.less.in)
                 .pipe(less())
                 .pipe(concat('style.css'))
+                .pipe(autoprefixer())
                 .pipe(cssmin())
                 .pipe(rename({
                     suffix: '.min',
