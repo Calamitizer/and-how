@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/Calamitizer/and-how#readme",
   "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
     "body-parser": "^1.17.2",
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
