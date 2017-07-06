@@ -13,9 +13,9 @@
 
     var siteRouter = require('./routers/site.js');
 
-    var xlv = express();
+    var andHow = express();
 
-    xlv
+    andHow
         .use(compression())
         .use(morgan('dev'))
         .use(bodyParser.urlencoded({
@@ -25,8 +25,8 @@
 
     var port = process.env.port || 3863 // "&?"!
 
-    xlv.set('port', port);
-    var server = http.createServer(xlv);
+    andHow.set('port', port);
+    var server = http.createServer(andHow);
     server.listen(port);
 
 }());

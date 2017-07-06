@@ -4,7 +4,7 @@
     var express = require('express');
     var path = require('path');
 
-    var root = path.join(__dirname, '..', '..', 'client', 'www');
+    var root = path.join(__dirname, '../../client/www');
 
     var siteRouter = express.Router();
 
