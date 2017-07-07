@@ -10,6 +10,9 @@
 
     function routingConfig($routeProvider, $locationProvider) {
         $routeProvider
+            .when('/about', {
+                templateUrl: '/about/about.tmpl.html',
+            })
             .when('/projects', {
                 templateUrl: '/projects/projects.tmpl.html',
             })
@@ -17,7 +20,7 @@
                 templateUrl: '/contact/contact.tmpl.html',
             })
             .otherwise({
-                redirectTo: '/',
+                redirectTo: '/about',
             });
 
         $locationProvider.html5Mode(true);

@@ -5,34 +5,46 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, scale-to-fit=no" />
+      content="width=device-width, initial-scale=1, scale-to-fit=no"
+    />
     <base href="/" />
     <title>&?!</title>
     <meta
       name="description"
-      content="The personal website of Alex Ruble" />
+      content="The personal website of Alex Ruble"
+    />
 
     <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300|Zilla+Slab:300"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="style.min.css" />
+      href="style.min.css"
+    />
 
     <!-- JS -->
 
   </head>
 
   <body
+    class="app"
     ng-app="andHow"
     ng-controller="TestCtrl">
 
     <header ng-include="'header/header.tmpl.html'"></header>
+
     <main
+      class="app-content"
       role="main"
       ng-view>
     </main>
+
+    <footer ng-include="'footer/footer.tmpl.html'"></footer>
 
     <!-- inject:js -->
 

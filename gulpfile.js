@@ -29,8 +29,12 @@
             ],
         },
         less: {
+            cnst: [
+                dir.in + '/layout/',
+            ],
             in: [
-                path.join(dir.in, '**', '*.less'),
+                dir.in + '/**/*.less',
+                '!' + dir.in + '/**/*.cnst.less', // these will be imported
             ],
         },
         js: {
@@ -75,7 +79,9 @@
         return (
             gulp
                 .src(files.less.in)
-                .pipe(less())
+                .pipe(less({
+                    paths: files.less.cnst,
+                }))
                 .pipe(concat('style.css'))
                 .pipe(autoprefixer())
                 .pipe(cssmin())
