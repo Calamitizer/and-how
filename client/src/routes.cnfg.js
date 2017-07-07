@@ -9,18 +9,18 @@
     ];
 
     function routingConfig($routeProvider, $locationProvider) {
-        $locationProvider.html5Mode(true);
-
         $routeProvider
-            .when('/t1', {
-                templateUrl: '/test1.html',
+            .when('/projects', {
+                templateUrl: '/projects/projects.tmpl.html',
             })
-            .when('/t2', {
-                templateUrl: '/test2.html',
+            .when('/contact', {
+                templateUrl: '/contact/contact.tmpl.html',
             })
             .otherwise({
                 redirectTo: '/',
             });
+
+        $locationProvider.html5Mode(true);
     }
 
     module.exports = routingConfig;

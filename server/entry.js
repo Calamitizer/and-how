@@ -6,6 +6,7 @@
     var express = require('express');
     var morgan = require('morgan');
     var bodyParser = require('body-parser');
+    var compression = require('compression');
 
     var path = require('path');
     var http = require('http');
@@ -16,6 +17,7 @@
     var andHow = express();
 
     andHow
+        .use(compression())
         .use(morgan('dev'))
         .use(bodyParser.json())
         .use(bodyParser.urlencoded({

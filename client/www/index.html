@@ -27,31 +27,15 @@
   <body
     ng-app="andHow"
     ng-controller="TestCtrl">
-    <header>
-      <div class="header-left"></div>
-      <div class="header-center">
-        <nav>
-          <li><a href="#"><h1>Header</h1></a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-        </nav>
-      </div>
-      <div class="header-right">
-        <button>Button</button>
-      </div>
-    </header>
 
+    <header ng-include="'header/header.tmpl.html'"></header>
     <main
       role="main"
       ng-view>
-
     </main>
 
-
-
-
-
     <script type="text/javascript" src="bundle.js"></script>
+
   </body>
 
 </html>
