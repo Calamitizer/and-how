@@ -1,11 +1,21 @@
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    margin-top: 1em;
+    padding: 10px;
     text-align: center;
     background: #eee;
+
+    @media only screen and (min-width: 480px) {
+        flex-direction: row;
+    }
+
+    h1,
+    h2 {
+        margin: 0;
+    }
 }
 
 .header-left,
@@ -15,17 +25,28 @@
 }
 
 .header-center {
-    flex: 2;
+    flex: 3;
     background: #F7F;
 }
 
 .header-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: baseline;
+    }
 
     > div {
         flex: 1;
+        margin: 0 1.5em;
+    }
+
+    a {
+        color: #F00;
+        text-decoration: none;
     }
 }
