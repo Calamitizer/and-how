@@ -1,0 +1,41 @@
+@import '../less-common/colors.cnst.less';
+@import '../less-common/mixins.less';
+
+.about-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    h1, h2, h3,
+    h4, h5, h6 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: @color-2a-dk-2;
+        text-shadow: 0 0 0 @color-2a-dk-3;
+        margin: .5em 0;
+    }
+
+    p {
+        font-family: 'Zilla Slab', serif;
+        color: @color-2a-dk-3;
+    }
+}
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    > * {
+        flex: 1;
+    }
+}
+
+.about-box {
+    .shadow();
+    padding: 1vw 2vw;
+    background: @color-2b-lt-2;
+    max-width: 38vw;
+}

@@ -1,15 +1,15 @@
-@import '../layout/colors.cnst.less';
-@import '../layout/media-breakpoints.cnst.less';
+@import '../less-common/colors.cnst.less';
+@import '../less-common/media-breakpoints.cnst.less';
 
 .header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 2em;
     padding: 10px;
     text-align: center;
-    background: @color-1-dk-2;
+    background: @color-1-lt-2;
 
     @media @small {
         flex-direction: row;
@@ -24,12 +24,12 @@
 .header-left,
 .header-right {
     flex: 1;
-    background: #7FF;
+    /*background: #7FF;*/
 }
 
 .header-center {
-    flex: 3;
-    background: #F7F;
+    flex: 2;
+    /*background: #F7F;*/
 }
 
 .header-nav {
@@ -44,13 +44,24 @@
     }
 
     > div {
-        flex: 1;
-        margin: 1.0em 1.5em;
+        flex: 0;
+        margin: 1vh 1.5em;
+
+        @media @medium {
+            margin: 1em 1.5em;
+        }
     }
 
     a {
         font-family: 'Roboto', sans-serif;
-        color: #F00;
+        color: @color-2a-dk-2;
+        text-shadow: 0 0 0 @color-2a-dk-3;
+        /*
+            -1px -1px 0 @color-2a-dk-3,
+            -1px  1px 0 @color-2a-dk-3,
+             1px -1px 0 @color-2a-dk-3,
+             1px  1px 0 @color-2a-dk-3;
+         */
         text-decoration: none;
     }
 }
