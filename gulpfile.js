@@ -41,6 +41,10 @@
             in: path.join(dir.in, 'entry.js'),
             out: path.join(dir.out, 'bundle.js'),
         },
+        img: {
+            in: dir.in + '/img/**/*',
+            out: dir.out + '/img/',
+        },
     };
 
     gulp.on('error', function(err) {
@@ -101,8 +105,12 @@
         );
     });
 
-    gulp.task('json', function() {
-        /* */
+    gulp.task('img', function() {
+        return (
+            gulp
+                .src(files.img.in)
+                .pipe(gulp.dest(files.img.out))
+        );
     });
 
     gulp.task('build', function() {
@@ -115,7 +123,7 @@
                 'html',
                 'less',
                 'js',
-                'json',
+                'img',
             ]
         );
     });
