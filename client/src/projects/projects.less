@@ -57,16 +57,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+}
 
-    @media @medium {
-        flex-direction: row;
-        justify-contents: space-between;
-        align-items: stretch;
-
-        > * {
-            flex: 1;
-        }
-    }
+.project-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
 }
 
 .project-summary {
@@ -75,13 +73,30 @@
         font-size: 1.35em;
         color: @color-2a-dk-3;
     }
-
-    @media @medium {
-        flex: 2;
-    }
 }
 
 .project-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media @large {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        > .project-tools-list {
+            flex: 1;
+        }
+    }
+}
+
+.project-tools-header {
+    /* */
+}
+
+.project-tools-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
