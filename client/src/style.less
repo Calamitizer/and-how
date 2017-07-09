@@ -3,7 +3,7 @@
 @import './less-common/media-breakpoints.cnst.less';
 
 * {
-    /* */
+    text-rendering: optimizelegibility;
 }
 
 .app {
@@ -12,14 +12,23 @@
     min-height: 100vh;
     margin: 0;
 
-    background: @color-1-lt-3;
+    background: @color-1-bg;
 }
 
 .app-content {
     min-width: 100vw;
     max-width: 100vw;
     flex: 1;
+    align-self: center;
     padding: 3em 10vw;
+    margin: 0;
+
+    @media @xlarge {
+        /*@padding: calc((100vw - (.8 * @xlarge-size)*/
+        max-width: calc(.8 * @xlarge-size);
+        padding: 0;
+        margin: 3em 10vw;
+    }
 }
 
 .header {

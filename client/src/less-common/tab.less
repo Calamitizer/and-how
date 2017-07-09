@@ -34,6 +34,37 @@
     }
 }
 
+.tab-section-rule {
+    @color: #000;
+    @size: 15px;
+    align-self: stretch;
+    background-color: fade(@color, 25%);
+    height: 2px;
+    margin: 10px 7vw;
+
+    position: relative;
+
+    &:before {
+        position: absolute;
+        box-shadow: inset -15px 0 15px -15px fade(@color, 50%);
+        content: "";
+        height: 100%;
+        width: 15px;
+        top: 0;
+        left: -15px;
+    }
+
+    &:after {
+        position: absolute;
+        box-shadow: inset 15px 0 15px -15px fade(@color, 50%);
+        content: "";
+        height: 100%;
+        width: 15px;
+        top: 0;
+        right: -15px;
+    }
+}
+
 .tab-box {
     .shadow();
     padding: 1vw 2vw;
