@@ -21,6 +21,21 @@
         font-family: 'Zilla Slab', serif;
         color: @color-2a-dk-3;
     }
+
+    a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            font-family: 'Zilla Slab', serif;
+            text-decoration: none;
+            color: @color-2a-lt-1;
+        }
+
+        &:hover {
+            color: @color-2a-lt-2;
+        }
+    }
 }
 
 .tab-section {
@@ -40,7 +55,7 @@
     align-self: stretch;
     background-color: fade(@color, 25%);
     height: 2px;
-    margin: 10px 7vw;
+    margin: 2.5em 7vw;
 
     position: relative;
 

@@ -15,7 +15,40 @@
 }
 
 .project-header {
-    /* */
+    @color: fade(@color-2b-lt-3, .35);
+    background: @color;
+    margin: 0 -25vw 1.5em;
+    padding: 1em 0;
+
+    box-shadow: 0 0 2px 1px @color;
+
+    /*
+    position: relative;
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 2 * @fade-vw;
+    }
+
+    &:before {
+        box-shadow: inset -@fade-vw 0 @fade-vw -@fade-vw @color;
+        left: 2 * -@fade-vw;
+    }
+
+    &:after {
+        box-shadow: inset @fade-vw 0 @fade-vw -@fade-vw @color;
+        right: 2 * -@fade-vw;
+    }
+    */
+
+
+    > h1 {
+        margin: 0;
+        font-size: 4em;
+    }
 }
 
 .project-gallery {
@@ -62,9 +95,24 @@
 .project-links {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: flex-start;
+
+    > div {
+        text-align: center;
+        @ol-color: #000;
+        margin: 10px;
+        padding: 0 0 2px 0;
+        box-shadow:
+            0 -1px 0 @ol-color,
+            0  1px 0 @ol-color;
+
+        > a {
+            // font-family: 'Roboto', sans-serif;
+            font-size: 1.5em;
+        }
+    }
 }
 
 .project-summary {

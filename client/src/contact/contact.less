@@ -6,10 +6,35 @@
     .tab();
 }
 
-.contact-section {
+.contact-item {
     .tab-section();
+
+    justify-content: center;
+
+    > * {
+        flex: 1 1 0;
+    }
+
+    margin: 2.5em 0;
 }
 
-.contact-box {
-    .tab-box();
+.contact-medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 4em;
+    color: @color-1;
+    text-shadow: 1px 1px 1px fade(@color-1-dk-3, 50%);
+    text-align: right !important;
+    margin: 0 3vw 0 0 !important;
+}
+
+.contact-handle {
+    > a {
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: 300;
+        font-size: 4em;
+        @color: @color-2a;
+        text-shadow: 1px 1px 1px fade(@color-2a-dk-3, 50%);
+        text-align: left !important;
+    }
 }
