@@ -14,10 +14,6 @@
     box-shadow:
         0 0 2px 1px fade(@color-1-dk-2, 30%);
 
-    @media @small {
-        flex-direction: row;
-    }
-
     h1,
     h2 {
         margin: 0;
@@ -26,26 +22,28 @@
     h2 {
         font-size: 3em;
     }
-}
 
-.header-left,
-.header-center,
-.header-right {
-    flex: 1;
-}
-
-.header-right {
     @media @small {
-        flex: 0;
+        flex-direction: row;
+
+        > .header-left {
+            flex: 1;
+        }
+
+        > .header-center {
+            flex: 2;
+        }
+
+        > .header-right {
+            flex: 0;
+        }
     }
 
     @media @large {
-        flex: 1;
+        > .header-right {
+            flex: 1;
+        }
     }
-}
-
-.header-center {
-    /*flex: 2;*/
 }
 
 .header-logo {
@@ -68,7 +66,7 @@
 
     > div {
         flex: 0;
-        margin: .5em 1.5em;
+        margin: 0 1.5em;
 
         @media @medium {
             margin: 1em 1.5em;
