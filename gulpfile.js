@@ -33,8 +33,9 @@
                 dir.in + '/less-common/',
             ],
             in: [
+                dir.in + '/less-common/normalize.css',
                 dir.in + '/**/*.less',
-                '!' + dir.in + '/less-common/', // these will be imported
+                '!' + dir.in + '/less-common/*.less', // these will be imported
             ],
         },
         js: {

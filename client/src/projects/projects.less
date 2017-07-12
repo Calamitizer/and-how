@@ -15,7 +15,7 @@
 }
 
 .project-header {
-    @color: fade(@color-2b-lt-3, .35);
+    @color: @color-2b-lt-3;
     background: @color;
     margin: 0 -25vw 1.5em;
     padding: 1em 0;
@@ -101,7 +101,7 @@
 
     > div {
         text-align: center;
-        @ol-color: fade(@color-1, 50%);
+        @ol-color: @color-2a;
         margin: 10px;
         padding: 0 0 2px 0;
         box-shadow:
@@ -160,7 +160,7 @@
         border: 1px solid @color-2b-lt-3;
         border-radius: 15px;
         background: @color-2b-bg;
-        box-shadow: 1px 1px 1px 0 fade(@color-2b-dk-2, 30%);
+        box-shadow: 1px 1px 1px 0 @color-2b-lt-3;
         margin: 7px 10px;
         padding: 12px;
 
