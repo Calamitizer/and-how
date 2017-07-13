@@ -1,7 +1,7 @@
 @import '../less-common/colors.cnst.less';
 @import '../less-common/media-breakpoints.cnst.less';
 
-.header {
+.outermost-space .header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -10,18 +10,9 @@
     padding: 10px;
     text-align: center;
 
-    background: @color-1;
+    background: @color-1-dk-1;
     box-shadow:
         0 0 2px 1px @color-1-lt-2;
-
-    h1,
-    h2 {
-        margin: 0;
-    }
-
-    h2 {
-        font-size: 3em;
-    }
 
     @media @small {
         flex-direction: row;
@@ -44,46 +35,42 @@
             flex: 1;
         }
     }
-}
 
-.header-logo {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 4.5em;
-    color: @color-2b-dk-2;
-}
-
-.header-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media @medium {
-        flex-direction: row;
-        align-items: baseline;
+    .header-logo {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 5em;
+        color: @color-2b-dk-2;
+        text-shadow:
+            2px 1px 0 fade(#000, 50%),
+            -1px 1px 0 @color-2b;
     }
 
-    > div {
-        flex: 0;
-        margin: 0 1.5em;
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         @media @medium {
-            margin: 1em 1.5em;
+            flex-direction: row;
+            align-items: baseline;
         }
-    }
 
-    a {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        color: @color-2a-lt-2;
-        text-shadow: 0 0 2px @color-2a-dk-1;
-        /*
-            -1px -1px 0 @color-2a-dk-3,
-            -1px  1px 0 @color-2a-dk-3,
-             1px -1px 0 @color-2a-dk-3,
-             1px  1px 0 @color-2a-dk-3;
-         */
-        text-decoration: none;
+        > div {
+            flex: 0;
+            margin: 0 1.5em;
+
+            @media @medium {
+                margin: 1em 1.5em;
+            }
+
+            a {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                color: @color-2a-bg;
+                text-decoration: none;
+            }
+        }
     }
 }
