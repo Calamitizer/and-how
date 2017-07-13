@@ -3,172 +3,128 @@
 @import '../less-common/media-breakpoints.cnst.less';
 @import '../less-common/colors.cnst.less';
 
-.projects-tab {
+.outermost-space .projects-tab {
     .tab();
-}
 
-.project-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
 
-.project-header {
-    @color: @color-2b-lt-3;
-    background: @color;
-    margin: 0 -25vw 1.5em;
-    padding: 1em 0;
+        .project-header  {
+            /*
+            @color: @color-2b-bg;
+            background: @color;
+            margin: 0 -25vw 1.5em;
+            padding: 1em 0;
 
-    box-shadow: 0 0 2px 1px @color;
-
-    /*
-    position: relative;
-
-    &:before,
-    &:after {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 2 * @fade-vw;
-    }
-
-    &:before {
-        box-shadow: inset -@fade-vw 0 @fade-vw -@fade-vw @color;
-        left: 2 * -@fade-vw;
-    }
-
-    &:after {
-        box-shadow: inset @fade-vw 0 @fade-vw -@fade-vw @color;
-        right: 2 * -@fade-vw;
-    }
-    */
-
-
-    > h1 {
-        margin: 0;
-        font-size: 4em;
-    }
-}
-
-.project-gallery {
-    /* */
-}
-
-.project-img {
-    align-self: center;
-
-    @img-radius: 12px;
-
-    a {
-        display: block;
-        border-radius: @img-radius;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
-        background: @color-2b-bg;
-        padding: 8px 10px;
-
-        @media @large {
-            max-width: calc(.8 * @large-size);
+            box-shadow: 0 0 2px 1px @color;
+            */
         }
 
-        @media @xlarge {
-            max-width: calc(.8 * @xlarge-size);
-        }
-    }
+        .project-gallery {
+            .project-img {
+                align-self: center;
+                @img-radius: 12px;
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: @img-radius;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
-    }
-}
+                > a {
+                    display: block;
+                    border-radius: @img-radius;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+                    background: @color-2b-bg;
+                    padding: 8px 10px;
 
-.project-desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-.project-links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
-
-    > div {
-        text-align: center;
-        @ol-color: @color-2a;
-        margin: 10px;
-        padding: 0 0 2px 0;
-        box-shadow:
-            0 -1px 0 @ol-color,
-            0  1px 0 @ol-color;
-
-        > a {
-            // font-family: 'Roboto', sans-serif;
-            font-size: 1.5em;
-        }
-    }
-}
-
-.project-summary {
-    p {
-        font-family: 'Zilla Slab', serif;
-        font-size: 1.35em;
-        color: @color-2a-dk-3;
-    }
-}
-
-.project-tools {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    @media @large {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-
-        > .project-tools-header {
-            flex: 1;
+                    > img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: @img-radius;
+                        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+                    }
+                }
+            }
         }
 
-        > .project-tools-list {
-            flex: 2;
-        }
-    }
-}
+        .project-desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
 
-.project-tools-header {
-    /* */
-}
+            .project-links {
+                display: flex;
+                flex-flox: row wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: flex-start;
 
-.project-tools-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+                > div {
+                    text-align: center;
+                    @ol-color: @color-2a;
+                    margin: 10px;
+                    padding: 0 0 2px 0;
+                    box-shadow:
+                        0 -1px 0 @ol-color,
+                        0  1px 0 @ol-color;
 
-    > div {
-        text-align: center;
-        border: 1px solid @color-2b-lt-3;
-        border-radius: 15px;
-        background: @color-2b-bg;
-        box-shadow: 1px 1px 1px 0 @color-2b-lt-3;
-        margin: 7px 10px;
-        padding: 12px;
+                    > a {
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+            }
 
-        > span {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            font-size: 1.7em;
-            color: @color-2a;
+            .project-summary {
+            }
+
+            .project-tools {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                .project-tools-header {
+                }
+
+                .project-tools-list {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    > div {
+                        text-align: center;
+                        border: 1px solid @color-2b-lt-2;
+                        border-radius: 15px;
+                        background: @color-2b-bg;
+                        box-shadow: 1px 1px 3px 0 @color-2b-lt-1;
+                        margin: 7px 10px;
+                        padding: 12px;
+
+                        > span {
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 300;
+                            font-size: 1.7em;
+                            color: @color-2a-dk-2;
+                        }
+                    }
+                }
+
+                @media @large {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    > .project-tools-header {
+                        flex: 1;
+                    }
+
+                    > .project-tools-list {
+                        flex: 2;
+                    }
+                }
+            }
         }
     }
 }
