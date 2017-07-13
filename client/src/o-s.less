@@ -1,6 +1,16 @@
 @import './less-common/colors.cnst.less';
 @import './less-common/media-breakpoints.cnst.less';
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 .outermost-space {
     display: flex;
     flex-direction: column;
@@ -22,6 +32,7 @@
     a,
     span {
         font-family: 'Zilla Slab', serif;
+        color: @color-2a-dk-3;
     }
 
     h1, h2, h3,
@@ -29,7 +40,7 @@
         margin: 0;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        color: @color-1;
+        color: @color-2a-dk-2;
         text-align: center;
         text-shadow: 1px 1px 1px @color-1-dk-1;
     }
@@ -41,21 +52,21 @@
     h2 {
         font-size: 3em;
     }
-}
 
-.content {
-    min-width: 100vw;
-    width: 100vw;
-    max-width: 100vw;
+    .content {
+        min-width: 100vw;
+        width: 100vw;
+        max-width: 100vw;
 
-    flex: 1;
-    @hor-pad: 6vw;
-    padding: 3em @hor-pad;
+        flex: 1;
+        @hor-pad: 12vw;
+        padding: 1em @hor-pad;
 
-    @media @xlarge {
-        min-width: unset;
-        max-width: @xlarge-size * (1 - (2 * @hor-pad / 100));
-        padding: 0;
-        align-self: center;
+        @media @xlarge {
+            min-width: unset;
+            max-width: @xlarge-size * (1 - (2 * @hor-pad / 100));
+            padding: 0;
+            align-self: center;
+        }
     }
 }
