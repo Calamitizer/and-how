@@ -35,32 +35,32 @@
 }
 
 .tab-section-rule {
-    @color: #000;
-    @size: 15px;
+    @color: @color-2b;
+    @size: 60px;
     align-self: stretch;
-    background-color: fade(@color, 25%);
+    background-color: fade(@color, 50%);
     height: 2px;
-    margin: 2.5em 7vw;
+    margin: 2em 7vw;
 
     position: relative;
 
     &:before {
         position: absolute;
-        box-shadow: inset -15px 0 15px -15px fade(@color, 50%);
+        box-shadow: inset -@size 0 @size -@size @color;
         content: "";
         height: 100%;
-        width: 15px;
+        width: @size;
         top: 0;
-        left: -15px;
+        left: -@size;
     }
 
     &:after {
         position: absolute;
-        box-shadow: inset 15px 0 15px -15px fade(@color, 50%);
+        box-shadow: inset @size 0 @size -@size @color;
         content: "";
         height: 100%;
-        width: 15px;
+        width: @size;
         top: 0;
-        right: -15px;
+        right: -@size;
     }
 }
