@@ -1,22 +1,11 @@
 @import '../less-common/colors.cnst.less';
 @import '../less-common/media-breakpoints.cnst.less';
+@import '../less-common/mixins.less';
 
 .outermost-space .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em 0 1em;
-    padding: 10px;
-    text-align: center;
-
-    background: @color-1-dk-1;
-    box-shadow:
-        0 0 2px 1px @color-1-lt-2;
+    .ribbon();
 
     @media @small {
-        flex-direction: row;
-
         > .header-left {
             flex: 1;
         }

@@ -4,6 +4,8 @@
 
 .contact-tab {
     .tab();
+
+    height: 100%;
 }
 
 .contact-item {
@@ -38,3 +40,37 @@
         text-align: left !important;
     }
 }
+
+.contact-icons {
+    flex: 1;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+.contact-icon {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+
+    > a > i {
+        font-size: 50vmin;
+        text-shadow: 0 3px 1px @color-2a-dk-2;
+    }
+
+    @media @small {
+        width: 50%;
+        margin: 0;
+
+        > a > i {
+            font-size: 25vmin;
+        }
+    }
+}
+
+
+
+
