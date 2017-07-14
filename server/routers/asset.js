@@ -1,7 +1,6 @@
 (function() {
     'use strict';
 
-    console.log('asset');
     var serveStatic = require('serve-static');
     var path = require('path');
 
