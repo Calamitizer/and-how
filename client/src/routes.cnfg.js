@@ -12,15 +12,27 @@
         $routeProvider
             .when('/about', {
                 templateUrl: '/about/about.tmpl.html',
+                controller: 'TabCtrl',
+                controllerAs: 'tabCtrl',
+                activeTab: 'about'
             })
             .when('/projects', {
                 templateUrl: '/projects/projects.tmpl.html',
+                controller: 'TabCtrl',
+                controllerAs: 'tabCtrl',
+                activeTab: 'projects'
             })
             .when('/contact', {
                 templateUrl: '/contact/contact.tmpl.html',
+                controller: 'TabCtrl',
+                controllerAs: 'tabCtrl',
+                activeTab: 'contact'
             })
             .otherwise({
                 redirectTo: '/about',
+                controller: 'TabCtrl',
+                controllerAs: 'tabCtrl',
+                activeTab: 'about'
             });
 
         $locationProvider.html5Mode(true);

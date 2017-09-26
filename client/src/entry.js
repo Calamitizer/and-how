@@ -13,7 +13,7 @@
         .config(routesConfig);
 
     require('./test.ctrl.js');
+    require('./tab.ctrl.js');
     require('./test.srvc.js');
-
 
 }());

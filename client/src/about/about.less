@@ -5,6 +5,7 @@
 
 .outermost-space .about-tab {
     .tab();
+    justify-content: center;
 
     .about-tab-section {
         .tab-section();
@@ -24,6 +25,8 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+
+            margin-top: 2em;
 
             > .about-picture {
                 flex: 2;
@@ -160,5 +163,12 @@
                 }
             }
         }
+    }
+
+    .about-facts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
     }
 }

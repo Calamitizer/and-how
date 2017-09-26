@@ -4,9 +4,15 @@
   </div>
   <div class="header-center">
     <nav class="header-nav">
-      <div><h5><a href="about">about</a></h2></div>
-      <div><h5><a href="projects">projects</a></h2></div>
-      <div><h5><a href="contact">contact</a></h2></div>
+      <div><h5><a
+            href="about"
+            ng-class="{ active: tabCtrl.$route.current.activeTab === 'about' }">about</a></h2></div>
+      <div><h5><a
+            href="projects"
+            ng-class="{ active: tabCtrl.$route.current.activeTab === 'projects' }">projects</a></h2></div>
+      <div><h5><a
+            href="contact"
+            ng-class="{ active: tabCtrl.$route.current.activeTab === 'contact' }">contact</a></h2></div>
     </nav>
   </div>
   <div class="header-right">

@@ -56,6 +56,7 @@
 
 	    __webpack_require__(6);
 	    __webpack_require__(7);
+	    __webpack_require__(8);
 	})();
 
 /***/ }),
@@ -35158,13 +35159,25 @@
 
 	    function routingConfig($routeProvider, $locationProvider) {
 	        $routeProvider.when('/about', {
-	            templateUrl: '/about/about.tmpl.html'
+	            templateUrl: '/about/about.tmpl.html',
+	            controller: 'TabCtrl',
+	            controllerAs: 'tabCtrl',
+	            activeTab: 'about'
 	        }).when('/projects', {
-	            templateUrl: '/projects/projects.tmpl.html'
+	            templateUrl: '/projects/projects.tmpl.html',
+	            controller: 'TabCtrl',
+	            controllerAs: 'tabCtrl',
+	            activeTab: 'projects'
 	        }).when('/contact', {
-	            templateUrl: '/contact/contact.tmpl.html'
+	            templateUrl: '/contact/contact.tmpl.html',
+	            controller: 'TabCtrl',
+	            controllerAs: 'tabCtrl',
+	            activeTab: 'contact'
 	        }).otherwise({
-	            redirectTo: '/about'
+	            redirectTo: '/about',
+	            controller: 'TabCtrl',
+	            controllerAs: 'tabCtrl',
+	            activeTab: 'about'
 	        });
 
 	        $locationProvider.html5Mode(true);
@@ -35193,6 +35206,26 @@
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	(function () {
+	    'use strict';
+
+	    const angular = __webpack_require__(1);
+
+	    angular.module('andHow').controller('TabCtrl', TabCtrl);
+
+	    TabCtrl.$inject = ['$route'];
+
+	    function TabCtrl($route) {
+	        var tabCtrl = this;
+	        tabCtrl.$route = $route;
+	        tabCtrl.testVar = 'foo';
+	    }
+	})();
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function () {
